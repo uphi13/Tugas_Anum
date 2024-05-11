@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hasil Iterasi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Hasil Iterasi</h1>
+    {% for table in tables %}
+    {{ table|safe }}
+    {% endfor %}
+    <div class="result">
+        <p>Hasil perhitungan: {{ result }}</p>
+        <p>Metode: {{ method }}</p>
+    </div>
+    <a href="{{ url_for('home') }}" class="back">Kembali</a>
+</body>
+
+</html>

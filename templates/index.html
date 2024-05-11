@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator Perhitungan Persamaan Non-Linear</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Kalkulator Persamaan Non-Linear</h1>
+    <form method="POST">
+        <label>Pilih Metode:</label>
+        <select name="method">
+            <option value="newton-raphson">Newton-Raphson</option>
+            <option value="secant">Secant</option>
+        </select>
+        <input type="submit" value="Pilih">
+    </form>
+</body>
+
+</html>

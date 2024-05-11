@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Newton Raphson Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Newton Raphson Calculator</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('newton_raphson') }}">
+        f(X): <input type="text" name="f_x"><br>
+        Xn: <input type="text" name="x_n"><br>
+        Epsilon: <input type="text" name="epsilon"><br>
+        <input type="submit" value="Calculate"><br>
+        <input type="reset" value="Reset"><br>
+    </form>
+</body>
+
+</html>

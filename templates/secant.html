@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secant Method Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Secant Method Calculator</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('secant') }}">
+        f(X): <input type="text" name="f_x"><br>
+        X0: <input type="text" name="x_n_minus_1"><br>
+        X1: <input type="text" name="x_n"><br>
+        Epsilon: <input type="text" name="epsilon"><br>
+        <input type="submit" value="Calculate"><br>
+        <input type="reset" value="Reset"><br>
+    </form>
+</body>
+
+</html>
